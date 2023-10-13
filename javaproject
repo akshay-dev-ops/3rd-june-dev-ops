@@ -8,18 +8,18 @@ pipeline {
 stages {
    stage ('checkout') {
     steps {
-       sh ***
+       sh '''
           git clone https://github.com/shashirajraja/Train-Ticket-Reservation-System.git
         cd Train-Ticket-Reservation-System
-         ***
+         '''
          }
 }
 stage ('build') {
       steps {
-         sh ***
+         sh '''
         cd /home/ec2-user/Train-Ticket-Reservation-System
         mvn clean install
-        ***
+        '''
         }
 }
 stage ('deploy') {
